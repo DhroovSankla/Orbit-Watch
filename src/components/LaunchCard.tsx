@@ -1,4 +1,4 @@
-
+import { CountdownTimer } from './CountdownTimer';
 import { Launch } from '../types/launch';
 import { Rocket, MapPin, Calendar } from 'lucide-react';
 
@@ -39,6 +39,10 @@ export function LaunchCard({ launch }: LaunchCardProps) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ddd' }}>
           <Calendar size={16} color="#aed581" />
           <span>{launchDate}</span>
+        </div>
+
+        <div style={{ marginTop: '0.5rem' }}>
+          <CountdownTimer targetDate={launch.net} />
         </div>
       </div>
     </div>
